@@ -8,7 +8,7 @@ def index(request):
     nombr = Nombre.objects.all()
 
     context = {
-        'listar': nombr
+        'nombr': nombr
     }
     return render(request, 'invitacion.html', context)
 

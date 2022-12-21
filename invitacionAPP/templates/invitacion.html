@@ -43,8 +43,8 @@
                     {% cloudinary 'logo-trasparente-2-828_utrd0f.png' width=200 crop='fill' %}
                     <h1 class="text-center" style="font-size: 80px; color: #5B694F">Invitacíon</h1>
                         <div class="col">
-                            {% for f in form %}
-                                <h2>{{ f.nombre }}</h2>
+                            {% for n in nombr %}
+                                <h2 class="text-center" style="font-size: 40px">Hola <code>{{ n.nombre }}</code></h2>
                             {% endfor %}
 
 
@@ -64,7 +64,7 @@
                     <br>
                     <br>
                     <br>
-                    <h5 class="text-center" style="font-size: 25px; color: #5C5C5C">"Disfrutemos juntos de la alegría navideña con comida, bebidas, música y mucho más!""</h5>
+                    <h5 class="text-center" style="font-size: 25px; color: #5C5C5C">"Disfrutemos juntos de la alegría navideña con comida, bebidas, música y mucho más!"</h5>
                     <br>
                     <br>
                     <div class="d-flex justify-content-center">
