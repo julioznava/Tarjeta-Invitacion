@@ -91,5 +91,32 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="{% static '/js/nieve.js' %}"></script>
      <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    const body =document.querySelector('body')
+
+    const crearNieve = () => {
+        let  copo = document.createElement('i')
+        let x = innerWidth * Math.random()
+        let size = (Math.random() * 8) + 2
+        let z = Math.round(Math.random()) * 100
+        let delay = Math.random() * 5
+        let anima = (Math.random() * 10) + 5
+
+        copo.style.left = x +'px'
+        copo.style.width =size +'px'
+        copo.style.height =size +'px'
+        copo.style.zIndex = z
+        copo.style.animationDelay = delay + 's'
+        copo.style.animationDuration = anima + 's'
+
+        body.appendChild(copo)
+        setTimeout(() => {
+                    copo.remove()
+        }, anima * 9000)
+    }
+
+setInterval(crearNieve, 100)
+</script>
 </body>
 </html>
