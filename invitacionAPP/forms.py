@@ -1,7 +1,6 @@
 from django import forms
 from .models import Nombre, Confirmacion
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.models import User
+
 
 
 class NombresForm(forms.ModelForm):
@@ -18,7 +17,7 @@ class ConfirmacionForm(forms.ModelForm):
 
 class CustomUserCreationForm(forms.ModelForm):
     class Meta:
-        model = User
-        fields = ['username']
-        exclude = ['password1', 'password2', 'password']
+        model = Nombre
+        fields = ['nombre']
+
 

@@ -29,6 +29,9 @@
     </style>
 </head>
 <body style="background-color: #434343">
+<br>
+<br>
+<br>
     <div class="container">
         <div class="row">
             <div class="col">
@@ -40,9 +43,11 @@
                     {% cloudinary 'logo-trasparente-2-828_utrd0f.png' width=200 crop='fill' %}
                     <h1 class="text-center" style="font-size: 80px; color: #5B694F">Invitacíon</h1>
                         <div class="col">
-                            {% for n in nombr %}
-                                <h2>nombre: {{ n.nombre }}</h2>
+                            {% for f in form %}
+                                <h2>{{ f.nombre }}</h2>
                             {% endfor %}
+
+
                         </div>
                     <br>
                     <br>
@@ -63,7 +68,7 @@
                     <br>
                     <br>
                     <div class="d-flex justify-content-center">
-                        <a href=""class="boton" style="font-size: 26px; border: none">Confirmar asistencia</a>
+                        <a href="#" class="btn btn-lg btn-success" style="font-size: 26px; border: none">Confirmar asistencia</a>
                     </div>
                     <br>
                     <br>

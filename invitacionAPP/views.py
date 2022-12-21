@@ -14,16 +14,13 @@ def index(request):
 
 def ingresonombre(request):
     context = {
-        'form': CustomUserCreationForm()
+        'form': NombresForm()
     }
     if request.method == 'POST':
-        formulario = CustomUserCreationForm(data=request.POST)
+        formulario = NombresForm(data=request.POST)
         if formulario.is_valid():
             formulario.save()
-            user = authenticate(username=formulario.cleaned_data['username'])
-            dj_login(request, user)
-            return redirect(to="panel")
-
+            return redirect(to="index")
         context['form'] = formulario
 
     return render(request, 'ingresonombre.html', context)
