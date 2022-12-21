@@ -31,4 +31,7 @@ def eliminardatos(request, id):
     eliminarnombre = get_object_or_404(Nombre, id=id)
     eliminarnombre.delete()
     messages.success(request, 'Invitacion confirmada exitosamente')
-    return redirect(to="ingresonombre")
+    return redirect(to="confirmacion")
+
+def confirmacion(request):
+    return render(request, 'confirmacion.html')
