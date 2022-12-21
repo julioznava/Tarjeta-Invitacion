@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import *
 from .forms import *
-from django.contrib.auth import authenticate, login as dj_login
+from django.contrib import messages
 # Create your views here.
 
 def index(request):
@@ -11,6 +11,7 @@ def index(request):
         'nombr': nombr
     }
     return render(request, 'invitacion.html', context)
+
 
 def ingresonombre(request):
     context = {
@@ -26,4 +27,8 @@ def ingresonombre(request):
     return render(request, 'ingresonombre.html', context)
 
 
-
+def eliminardatos(request, id):
+    eliminarnombre = get_object_or_404(Nombre, id=id)
+    eliminarnombre.delete()
+    messages.success(request, 'Invitacion confirmada exitosamente')
+    return redirect(to="ingresonombre")
