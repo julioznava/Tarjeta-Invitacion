@@ -1,3 +1,5 @@
+{% load crispy_forms_tags %}
+
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -5,21 +7,32 @@
     <title>Invitacion</title>
 </head>
 <body style="background-color: #434343">
-    <div class="container">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <div class="container" style="color: white">
+        <br>
+        <h1 class="container-fluid">Ingrese su nombre:</h1>
         <div class="row">
             <div class="col">
-                <div class="card">
                     <form action="" method="post" autocomplete="on">
                         {% csrf_token %}
                         {{ form | crispy }}
                         <br>
                         <div class="d-flex justify-content-end">
-                            <input type="reset" value="cancelar" class="btn btn-secondary">
-                            &nbsp;
-                            <button class="btn btn-success" type="submit" id="btnenviar">Enviar</button>
+                            <button class="btn btn-primary btn-lg" type="submit" id="btnenviar" style="font-size: 30px">Enviar</button>
                         </div>
                     </form>
-                </div>
             </div>
         </div>
     </div>
