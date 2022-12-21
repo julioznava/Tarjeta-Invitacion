@@ -42,7 +42,7 @@
                     <br>
 {#                    <img src="{% static '/img/logo-trasparente-2-828.png' %}" alt="" style="width: 220px">#}
                     {% cloudinary 'logo-trasparente-2-828_utrd0f.png' width=200 crop='fill' %}
-                    <h1 class="text-center" style="font-size: 80px; color: #5B694F">Invitacíon</h1>
+                    <h1 class="text-center" style="font-size: 80px; color: #5B694F">invitación</h1>
                         <div class="col">
                             {% for n in nombr %}
                                 <h2 class="text-center" style="font-size: 40px">{{ n.nombre }}</h2>
@@ -119,5 +119,17 @@
 
 setInterval(crearNieve, 100)
 </script>
+
+{% if  messages %}
+        {%  for m  in messages %}
+            <script>
+                Swal.fire({
+                    "title": 'Felicitaciones',
+                    "text": '{{ m }}',
+                    "icon": 'success',
+                })
+            </script>
+        {% endfor %}
+    {% endif %}
 </body>
 </html>
