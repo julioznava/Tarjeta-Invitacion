@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import *
 from .forms import *
 # Create your views here.
@@ -12,18 +12,22 @@ def index(request):
     return render(request, 'invitacion.html', context)
 
 def ingresonombre(request):
-    data = {
-        'form': NombresForm()
+    nombr = Nombre.objects.all()
+
+    context = {
+        'form': NombresForm(),
+        'nombr': nombr,
     }
     if request.method == 'POST':
         formulario = NombresForm(data=request.POST)
         if formulario.is_valid():
            formulario.save()
-           data['mensaje'] = "Se han ingresado los datos correctamente."
+           context['mensaje'] = "Se han ingresado los datos correctamente."
+           return redirect(to='index')
         else:
-            data['form'] = formulario
+            context['form'] = formulario
 
-    return render(request, 'ingresonombre.html', data)
+    return render(request, 'ingresonombre.html', context)
 
 def listarnombre(request):
     listar = Nombre.objects.all()
