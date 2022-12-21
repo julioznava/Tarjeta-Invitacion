@@ -4,10 +4,10 @@ from .forms import *
 # Create your views here.
 
 def index(request):
-    listar = Nombre.objects.all()
+    nombr = Nombre.objects.all()
 
     context = {
-        'listar': listar
+        'listar': nombr
     }
     return render(request, 'invitacion.html', context)
 
@@ -18,8 +18,8 @@ def ingresonombre(request):
     if request.method == 'POST':
         formulario = NombresForm(data=request.POST)
         if formulario.is_valid():
-            formulario.save()
-            data['mensaje'] = "Se han ingresado los datos correctamente."
+           formulario.save()
+           data['mensaje'] = "Se han ingresado los datos correctamente."
         else:
             data['form'] = formulario
 

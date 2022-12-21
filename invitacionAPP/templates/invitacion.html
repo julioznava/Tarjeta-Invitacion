@@ -37,7 +37,13 @@
                     <br>
                     <img src="{% static '/img/logo-trasparente-2-828.png' %}" alt="" style="width: 220px">
                     <h1 class="text-center" style="font-size: 80px; color: #5B694F">Invitacíon</h1>
-                    <h3>{{ listar.nombre }}</h3>
+                    {% for n in nombr %}
+                        <div class="col">
+                            <div class="card">
+                                <h2>{{ n.nombre }}</h2>
+                            </div>
+                        </div>
+                    {% endfor %}
                     <br>
                     <br>
                     <h5 class="text-center" style="font-size: 25px; color: #5C5C5C">Nuestra empresa Blanco viajes tiene el agrado de invitarlos coordialmente a nuestra</h5>
