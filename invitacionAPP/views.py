@@ -4,8 +4,12 @@ from .forms import *
 # Create your views here.
 
 def index(request):
-    return render(request, 'index.html')
+    listar = Nombre.objects.all()
 
+    context = {
+        'listar': listar
+    }
+    return render(request, 'invitacion.html', context)
 
 def ingresonombre(request):
     data = {
@@ -21,7 +25,13 @@ def ingresonombre(request):
 
     return render(request, 'ingresonombre.html', data)
 
+def listarnombre(request):
+    listar = Nombre.objects.all()
 
+    context = {
+        'listar': listar
+    }
+    return render(request, 'listar.html', context)
 
 def confirmar(request):
     data = {
@@ -36,3 +46,4 @@ def confirmar(request):
             data['form'] = formulario
 
     return render(request, 'confirmacion.html', data)
+

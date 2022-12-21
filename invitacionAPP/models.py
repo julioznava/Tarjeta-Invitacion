@@ -2,11 +2,14 @@ from django.db import models
 
 # Create your models here.
 
+class Confirmacion(models.Model):
+    confirmar = models.CharField(max_length=50, verbose_name='Confirmar')
+
+
 class Nombre(models.Model):
-    nombre = models.CharField(max_length=100, verbose_name='Ingrese su nombre:')
+    nombre = models.CharField(max_length=100, verbose_name='')
 
     def __str__(self):
         return self.nombre
 
-class Confirmacion(models.Model):
-    confirmar = models.CharField(max_length=50, verbose_name='Escriba la palabra "si" (sin comillas para confirmar su asistencia!) ')
+
