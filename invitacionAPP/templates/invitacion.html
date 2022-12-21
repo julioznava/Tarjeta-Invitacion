@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+{% load cloudinary %}
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -35,7 +36,8 @@
                     <br>
                     <br>
                     <br>
-                    <img src="{% static '/img/logo-trasparente-2-828.png' %}" alt="" style="width: 220px">
+{#                    <img src="{% static '/img/logo-trasparente-2-828.png' %}" alt="" style="width: 220px">#}
+                    {% cloudinary 'logo-trasparente-2-828_utrd0f.png' width=200 crop='fill' %}
                     <h1 class="text-center" style="font-size: 80px; color: #5B694F">Invitacíon</h1>
                         <div class="col">
                             {% for n in nombr %}
@@ -44,16 +46,20 @@
                         </div>
                     <br>
                     <br>
-                    <h5 class="text-center" style="font-size: 25px; color: #5C5C5C">Nuestra empresa Blanco viajes tiene el agrado de invitarlos coordialmente a nuestra</h5>
+                    <h5 class="text-center" style="font-size: 25px; color: #5C5C5C">En celebración de las vísperas de navidad y año nuevo, y nuestro agradecimiento a todo el equipo de</h5>
+                    <h5 class="text-center" style="font-size: 25px; color: #5C5C5C">Blanco Viajes por este último año, es que nos complace invitarlos a la Fiesta</h5>
                     <br>
                     <br>
-                    <h1 class="text-center" style="font-size: 140px; color: #79876C">Cena & brindis  <span class="text-center">fin de año</span></h1>
+                    <h1 class="text-center" style="font-size: 140px; color: #79876C">Fin de Año de Blanco Viajes</h1>
                     <br>
                     <br>
                     <h5  class="text-center" style="font-size: 60px; color: #5C5C5C">el dia: 22-12-2022</h5>
                     <br>
-                    <h5  class="text-center" style="font-size: 40px; color: #5C5C5C">Lugar: Hotel Regal Pacific 20:00 Horas</h5>
+                    <h5  class="text-center" style="font-size: 40px; color: #5C5C5C">Lugar: Hotel Regal Pacific 19:00 Horas</h5>
                     <br>
+                    <br>
+                    <br>
+                    <h5 class="text-center" style="font-size: 25px; color: #5C5C5C">"Disfrutemos juntos de la alegría navideña con comida, bebidas, música y mucho más!""</h5>
                     <br>
                     <br>
                     <div class="d-flex justify-content-center">
@@ -62,8 +68,8 @@
                     <br>
                     <br>
                     <div class="container">
-                        <div class="card" style="border: none; background-color: #E0E0E0">
-                            <img src="{% static '/img/QR2.png' %}" alt="" style="width: 200px" <img src="./img/logo-trasparente-2-828.png" alt="" style="width: 300px" class="mx-auto">
+                        <div class="card mx-auto" style="border: none; background-color: #E0E0E0; width: 200px">
+                            {% cloudinary 'QR2_d7fdmk.png' width=200 crop='fill' %}
                         </div>
                         <br>
                         <br>

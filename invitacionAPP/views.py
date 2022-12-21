@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import *
 from .forms import *
+from django.contrib.auth import authenticate, login as dj_login
 # Create your views here.
 
 def index(request):
@@ -12,42 +13,20 @@ def index(request):
     return render(request, 'invitacion.html', context)
 
 def ingresonombre(request):
-    nombr = Nombre.objects.all()
-
     context = {
-        'form': NombresForm(),
-        'nombr': nombr,
+        'form': CustomUserCreationForm()
     }
     if request.method == 'POST':
-        formulario = NombresForm(data=request.POST)
+        formulario = CustomUserCreationForm(data=request.POST)
         if formulario.is_valid():
-           formulario.save()
-           context['mensaje'] = "Se han ingresado los datos correctamente."
-           return redirect(to='index')
-        else:
-            context['form'] = formulario
+            formulario.save()
+            user = authenticate(username=formulario.cleaned_data['username'])
+            dj_login(request, user)
+            return redirect(to="panel")
+
+        context['form'] = formulario
 
     return render(request, 'ingresonombre.html', context)
 
-def listarnombre(request):
-    listar = Nombre.objects.all()
 
-    context = {
-        'listar': listar
-    }
-    return render(request, 'listar.html', context)
-
-def confirmar(request):
-    data = {
-        'form': ConfirmacionForm()
-    }
-    if request.method == 'POST':
-        formulario = ConfirmacionForm(data=request.POST)
-        if formulario.is_valid():
-            formulario.save()
-            data['mensaje'] = "Se han ingresado los datos correctamente."
-        else:
-            data['form'] = formulario
-
-    return render(request, 'confirmacion.html', data)
 
