@@ -21,6 +21,7 @@ def ingresonombre(request):
         formulario = NombresForm(data=request.POST)
         if formulario.is_valid():
             formulario.save()
+            messages.success(request, 'Se ruega hacer clic en botón “Confirmar asistencia” para dejar el registro de su ingreso.')
             return redirect(to="index")
         context['form'] = formulario
 
