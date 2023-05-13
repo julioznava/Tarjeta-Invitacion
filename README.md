@@ -51,3 +51,6 @@ Una vez Pinchado el botón deberá seguir las instrucciones para continuar.
 * Como posible funcionalidad extra se puede generar un código QR automatizado en Django y que se pueda vincular dentro del témplate.
 * Realizar el backend con la lista de personas confirmadas con botón funcionalidad que envíe un mail al usuario que fue confirmado exitosamente (aun no implementado) 
 
+
+Proyecto realizado por  ® Julio Navarro Rojas - 2023
+
