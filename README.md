@@ -44,7 +44,7 @@ Una vez Pinchado el botón deberá seguir las instrucciones para continuar.
 
 
 
-###	Posibles desarrollo futuro y correcciones:
+###	Ideas para desarrollo futuro y correcciones:
 
 * Corregir problema de que al momento de cerrar el navegador antes de seguir las instrucciones quedara el nombre anterior en la tarjeta cuando se vuelva a ingresar el nombre en el inicio (posible problemas con las tablas en BD)
 
