@@ -15,17 +15,15 @@ Proyecto realizado con los siguientes lenguajes y frameworks:
 
 Este proyecto consiste en enviar el link del sitio para que el usuario ingrese su nombre, y este quede registrado automáticamente para que en la invitación aparezca su nombre (puede usar nombre y apellido)
 
-![image-20230513131927829](C:\Users\julioznava\AppData\Roaming\Typora\typora-user-images\image-20230513131927829.png)
+![image](https://github.com/julioznava/Tarjeta-Invitacion/assets/67343722/95ac0351-38d4-4d18-918a-5e4b8545f721)
+
 
 Aparecerá la tarjeta de invitación con el nombre que hayas ingresado en el paso anterior. de la misma forma aparecerá un código QR que mostrara en donde se realizara el evento. 
 
-**Como posible funcionalidad extra se puede generar un código QR automatizado en Django y que se pueda vincular dentro del témplate.**
+![image](https://github.com/julioznava/Tarjeta-Invitacion/assets/67343722/3de66d48-75c1-4619-8172-097b66859b55)
 
 
 
-
-
-![image-20230513133954215](C:\Users\julioznava\AppData\Roaming\Typora\typora-user-images\image-20230513133954215.png)
 
 
 
@@ -35,15 +33,14 @@ Aparecerá la tarjeta de invitación con el nombre que hayas ingresado en el pas
 
 Una vez Pinchado el botón deberá seguir las instrucciones para continuar.
 
-![image-20230513134347829](C:\Users\julioznava\AppData\Roaming\Typora\typora-user-images\image-20230513134347829.png)
-
+![image](https://github.com/julioznava/Tarjeta-Invitacion/assets/67343722/7ae1a2c8-1a93-4e4b-b771-c0f930a14802)
 
 
 
 
 **Este paso es importante deberá pinchar el Botón "Volver al inicio" y no cerrar el navegador hasta pinchar dicho botón.**
 
-![image-20230513134401753](C:\Users\julioznava\AppData\Roaming\Typora\typora-user-images\image-20230513134401753.png)
+![image](https://github.com/julioznava/Tarjeta-Invitacion/assets/67343722/623c4f8c-1783-4965-8829-cb1786123985)
 
 
 
